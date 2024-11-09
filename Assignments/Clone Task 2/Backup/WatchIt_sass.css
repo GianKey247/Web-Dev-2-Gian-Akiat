@@ -1,0 +1,317 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: Teko;
+  src: url(Fonts/Teko-Regular.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(Fonts/Lato-Regular.ttf);
+}
+h2 {
+  font-family: Teko;
+  font-size: 3em;
+}
+
+.page {
+  max-width: 900px;
+}
+
+button {
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-family: Teko;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+  font-family: Lato;
+}
+
+ul {
+  list-style-type: none;
+  font-family: Lato;
+}
+
+img {
+  width: 100%;
+}
+
+.nav_Bar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.movie_Poster {
+  box-shadow: 16px 16px #070410;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .nav_Bar {
+    padding: 16px;
+  }
+  ul {
+    display: none;
+  }
+  .movie_Gallery {
+    margin-left: -6.5%;
+    margin-right: -6%;
+  }
+  .movie_Poster {
+    box-shadow: 0px 0px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+  }
+  .movie_Poster p {
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: left;
+    flex-grow: 1;
+    /* Allows the paragraph to take up remaining space */
+  }
+  .movie_Poster button {
+    width: 100%;
+    margin-bottom: 16px;
+    /* Adds spacing from content above */
+    padding: 0.5rem;
+  }
+  .page {
+    margin: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .nav_Bar h2 {
+    padding-right: 32px;
+    margin: 0;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 0 16px;
+    text-decoration: none;
+  }
+  .nav_Bar button {
+    margin-left: 32px;
+    padding: 10px 20px;
+  }
+  hr {
+    background-color: #070410;
+    height: 5px;
+    margin-left: -5%;
+    margin-right: -5%;
+  }
+  .movie_Gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: visible;
+    gap: 32px;
+    justify-items: center;
+    margin: auto;
+    padding-bottom: 32px;
+  }
+  .movie_Poster {
+    border-style: solid;
+    border-width: 1px;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .movie_Poster p {
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: left;
+    flex-grow: 1;
+    /* Allows the paragraph to take up remaining space */
+  }
+  .movie_Poster button {
+    width: 100%;
+    margin-bottom: 16px;
+    /* Adds spacing from content above */
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .movie_Gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin: 48px;
+  }
+  .movie_Poster:nth-child(1) {
+    grid-column: span 2/span 2;
+  }
+  .movie_Poster:nth-child(n+2):nth-child(-n+3) {
+    grid-row-start: 2;
+  }
+  .movie_Poster:nth-child(5) {
+    grid-row-start: 4;
+  }
+  .movie_Poster:nth-child(6) {
+    grid-row-start: 5;
+  }
+  .movie_Poster:nth-child(4), .movie_Poster:nth-child(5), .movie_Poster:nth-child(6) {
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-style: solid;
+    border-color: white;
+    border-top: px;
+  }
+  .movie_Poster:nth-child(4) img, .movie_Poster:nth-child(5) img, .movie_Poster:nth-child(6) img {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex: 1;
+  }
+  .movie_Poster:nth-child(4) p, .movie_Poster:nth-child(5) p, .movie_Poster:nth-child(6) p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+}/*# sourceMappingURL=WatchIt_sass.css.map */

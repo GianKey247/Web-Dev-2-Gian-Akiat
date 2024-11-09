@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Teko;
+    src: url(Fonts/Teko-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(Fonts/Lato-Regular.ttf);
+}
+
+h2{
+    font-family: Teko;
+    font-size: 3em;
+}
+
+.page{
+    max-width: 900px;
+}
+
+button{
+    border-radius: 10%;
+    font-family: Teko;
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.5em;
+    font-family: Lato;
+}
+
+.nav_Bar {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    width: 110%;
+    
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    border-style: dashed;
+    font-family: Lato;
+}
+
+li {
+    display: inline;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+.nav_Bar h2{
+}
+
+.nav_Bar button{
+}
+
